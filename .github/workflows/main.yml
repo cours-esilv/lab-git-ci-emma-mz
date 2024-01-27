@@ -1,3 +1,8 @@
+on:
+  push:
+    branches:
+      - main
+      - 'feature/emevanza
 # Installe java 8 sur l'agent
 - name: Set up JDK 8
   uses: actions/setup-java@v2
@@ -9,3 +14,11 @@
 # Compile notre application
 - name: Build with Maven
   run: mvn --batch-mode --update-snapshots package
+
+- name: Install Docker
+  uses: docker/setup-buildx-action@v1
+  with:
+    install: true
+    
+- name: Docker build
+  run: docker build -t my-application:latest .
