@@ -6,11 +6,9 @@ What is a commit?
 
 - A. A validated step in the code that appears in the repository history.
 
-
 ### Question 2
 
 How can I find out the current state of a repository?
-
 
 - C. `git status`
 
@@ -66,4 +64,4 @@ A branch is :
 
 How can I find out what changes were made in the last commit?
 
-- A. Use `git diff HEAD HEAD~1`.
+- A. Use `git diff HEAD `.
